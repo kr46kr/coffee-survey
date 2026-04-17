@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Quiz Style Preview — Minimal</title>
+    <style>
+      :root {
+        --bg: #f5f0e8;
+        --panel: rgba(255, 252, 246, 0.88);
+        --text: #2f241d;
+        --muted: #746256;
+        --accent: #7b5433;
+        --border: rgba(123, 84, 51, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 35%),
+          linear-gradient(135deg, #efe4d3, var(--bg));
+        display: grid;
+        place-items: center;
+        padding: 32px 20px;
+      }
+
+      .card {
+        width: min(720px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 40px;
+        box-shadow: 0 24px 60px rgba(47, 36, 29, 0.12);
+        backdrop-filter: blur(10px);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      h1 {
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.02;
+        margin: 0 0 12px;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .progress {
+        width: 100%;
+        height: 6px;
+        background: rgba(123, 84, 51, 0.12);
+        border-radius: 999px;
+        margin-bottom: 28px;
+        overflow: hidden;
+      }
+
+      .progress > span {
+        display: block;
+        width: 44%;
+        height: 100%;
+        background: linear-gradient(90deg, #b8895d, var(--accent));
+      }
+
+      .answers {
+        display: grid;
+        gap: 14px;
+      }
+
+      button {
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--text);
+        text-align: left;
+        padding: 18px 20px;
+        border-radius: 18px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        border-color: rgba(123, 84, 51, 0.32);
+        box-shadow: 0 12px 24px rgba(47, 36, 29, 0.08);
+      }
+
+      .footer {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">NovaBrew Taste Profile Quiz</p>
+      <div class="progress"><span></span></div>
+      <h1>What kind of morning feels most like you?</h1>
+      <p>
+        Pick the answer that feels natural. There are no wrong answers here,
+        just clues about your coffee personality.
+      </p>
+      <section class="answers">
+        <button>A slow sunrise, a journal, and one cup that tastes just right</button>
+        <button>A strong first sip before the world starts asking things of me</button>
+        <button>A cozy routine with something warm, familiar, and comforting</button>
+        <button>A different café, a different mood, and maybe something surprising</button>
+      </section>
+      <div class="footer">
+        <span>Question 3 of 7</span>
+        <span>Minimal / clean / premium</span>
+      </div>
+    </main>
+  </body>
+</html>

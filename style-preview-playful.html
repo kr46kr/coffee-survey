@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Quiz Style Preview — Playful</title>
+    <style>
+      :root {
+        --bg1: #fff3dc;
+        --bg2: #ffd3b0;
+        --panel: rgba(255, 250, 245, 0.92);
+        --text: #4e2f2b;
+        --muted: #8e5e57;
+        --accent: #ff8e5e;
+        --accent-2: #ffcf5a;
+        --border: rgba(78, 47, 43, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Trebuchet MS", "Avenir Next", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 32%),
+          linear-gradient(135deg, var(--bg1), var(--bg2));
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .card {
+        width: min(740px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 34px;
+        padding: 34px;
+        box-shadow: 0 24px 50px rgba(78, 47, 43, 0.14);
+      }
+
+      .chips {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      .chip {
+        background: white;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(30px, 5vw, 48px);
+        line-height: 1.03;
+      }
+
+      p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .answers {
+        display: grid;
+        gap: 12px;
+      }
+
+      button {
+        border: none;
+        background: white;
+        color: var(--text);
+        text-align: left;
+        padding: 18px 18px;
+        border-radius: 22px;
+        font-size: 17px;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(78, 47, 43, 0.08);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 16px 28px rgba(78, 47, 43, 0.12);
+      }
+
+      .emoji {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="chips">
+        <span class="chip">NovaBrew</span>
+        <span class="chip">Taste quiz</span>
+        <span class="chip">Question 3 of 7</span>
+      </div>
+      <h1>What kind of coffee mood are you in most often?</h1>
+      <p>
+        Pick the answer that feels most like you. This helps NovaBrew match your
+        taste and energy, not just your caffeine level.
+      </p>
+      <section class="answers">
+        <button><span class="emoji">🔥</span>I want something strong that wakes up the whole room</button>
+        <button><span class="emoji">✨</span>I want something smooth, polished, and easy to love</button>
+        <button><span class="emoji">📚</span>I want something warm, cozy, and reliably comforting</button>
+        <button><span class="emoji">🎲</span>I want something different that keeps things interesting</button>
+      </section>
+      <div class="footer">
+        <span>Playful / warm / inviting</span>
+        <span>Great for shareability</span>
+      </div>
+    </main>
+  </body>
+</html>
